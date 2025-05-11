@@ -5,9 +5,9 @@ public class Paquete {
 	private double altura;
 	private double anchura;
 	private double profundidad;
-	private double peso;
+	private Integer peso;
 	
-	public Paquete(double altura, double anchura, double profundidad, double peso) {
+	public Paquete(double altura, double anchura, double profundidad, Integer peso) {
 		this.altura=altura;
 		this.anchura=anchura;
 		this.profundidad=profundidad;
@@ -16,6 +16,10 @@ public class Paquete {
 	
 	public double calcularVolumen() {
 		return altura*anchura*profundidad;
+	}
+
+	public Integer getPeso() {
+		return this.peso;
 	}
 	
 	
