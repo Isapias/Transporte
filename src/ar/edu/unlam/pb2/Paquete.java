@@ -2,12 +2,12 @@ package ar.edu.unlam.pb2;
 
 public class Paquete {
 	
-	private double altura;
-	private double anchura;
-	private double profundidad;
-	private Integer peso;
+	private Double altura;
+	private Double anchura;
+	private Double profundidad;
+	private Double peso;
 	
-	public Paquete(double altura, double anchura, double profundidad, Integer peso) {
+	public Paquete(Double altura, Double anchura, Double profundidad, Double peso) {
 		this.altura=altura;
 		this.anchura=anchura;
 		this.profundidad=profundidad;
@@ -18,7 +18,7 @@ public class Paquete {
 		return altura*anchura*profundidad;
 	}
 
-	public Integer getPeso() {
+	public Double getPeso() {
 		return this.peso;
 	}
 	
