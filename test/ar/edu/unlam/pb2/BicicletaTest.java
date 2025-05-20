@@ -8,62 +8,50 @@ import org.junit.jupiter.api.Test;
 class BicicletaTest {
 
 	@Test
-	void queAceptePaqueteValido() {
+	void queAceptePaqueteValidoTest() {
 		Bicicleta bicicleta = new Bicicleta();
 		Paquete p1 = new Paquete(0.1, 0.1, 0.1, 1.0);
-		assertTrue(bicicleta.puedeTransportar(p1, "Moron"));
+		assertTrue(bicicleta.transportarPaquete(p1, "Moron"));
 
 	}
 
 	@Test
-	void queAcepteDosPaquetesValidos() {
+	void queAcepteDosPaquetesYRechaceElTerceroTest() {
 		Bicicleta bicicleta = new Bicicleta();
 		Paquete p1 = new Paquete(0.1, 0.1, 0.1, 1.0);
 		Paquete p2 = new Paquete(0.1, 0.1, 0.1, 1.0);
 		Paquete p3 = new Paquete(0.1, 0.1, 0.1, 1.0);
-		assertTrue(bicicleta.puedeTransportar(p1, "Moron"));
-		assertTrue(bicicleta.puedeTransportar(p2, "Moron"));
-		assertFalse(bicicleta.puedeTransportar(p3, "Moron"));
+		assertTrue(bicicleta.transportarPaquete(p1, "Moron"));
+		assertTrue(bicicleta.transportarPaquete(p2, "Moron"));
+		assertFalse(bicicleta.transportarPaquete(p3, "Moron"));
 
 	}
 
 	@Test
-	void queRechacePaqueteExcedidoEnVolumen() {
+	void queRechacePaqueteExcedidoEnVolumenTest() {
 		Bicicleta bicicleta = new Bicicleta();
 		Paquete p1 = new Paquete(0.5, 0.5, 0.6, 1.0);
-		assertFalse(bicicleta.puedeTransportar(p1, "Moron"));
+		assertFalse(bicicleta.transportarPaquete(p1, "Moron"));
 
 	}
 
 	@Test
-	void queRechacePaqueteExcedidoEnPeso() {
+	void queRechacePaqueteExcedidoEnPesoTest() {
 		Bicicleta bicicleta = new Bicicleta();
 		Paquete p1 = new Paquete(0.5, 0.5, 0.5, 16.0);
-		assertFalse(bicicleta.puedeTransportar(p1, "Moron"));
+		assertFalse(bicicleta.transportarPaquete(p1, "Moron"));
 
 	}
 
 	@Test
-	void queRechaceTresPaquetesValidos() {
+	void queRechaceTresPaquetesValidosTest() {	
 		Bicicleta bicicleta = new Bicicleta();
 		Paquete p1 = new Paquete(0.1, 0.1, 0.1, 1.0);
 		Paquete p2 = new Paquete(0.1, 0.1, 0.1, 1.0);
 		Paquete p3 = new Paquete(0.1, 0.1, 0.1, 1.0);
-		assertTrue(bicicleta.puedeTransportar(p1, "Moron"));
-		assertTrue(bicicleta.puedeTransportar(p2, "Moron"));
-		assertFalse(bicicleta.puedeTransportar(p3, "Moron"));
-
-	}
-
-	@Test
-	void queRechaceTresPaquetes() {
-		Bicicleta bicicleta = new Bicicleta();
-		Paquete p1 = new Paquete(0.1, 0.1, 0.1, 1.0);
-		Paquete p2 = new Paquete(0.1, 0.1, 0.1, 1.0);
-		Paquete p3 = new Paquete(0.1, 0.1, 0.1, 1.0);
-		bicicleta.puedeTransportar(p1, "Moron");
-		bicicleta.puedeTransportar(p2, "Moron");
-		assertFalse(bicicleta.puedeTransportar(p3, "Moron"));
+		assertTrue(bicicleta.transportarPaquete(p1, "Moron"));
+		assertTrue(bicicleta.transportarPaquete(p2, "Moron"));
+		assertFalse(bicicleta.transportarPaquete(p3, "Moron"));
 
 	}
 }
