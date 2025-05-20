@@ -36,7 +36,7 @@ class AutoTest {
 	@Test
 	public void noPermitirMasDeTresDestinosTest() {
 		Auto auto = new Auto("XYZ789");
-		// Agregar paquetes con 3 destinos diferentes
+
 		assertTrue(auto.transportarPaquete(new Paquete(0.5, 0.5, 0.5, 100.0), "Cordoba"));
 		assertTrue(auto.transportarPaquete(new Paquete(0.5, 0.5, 0.5, 100.0), "Buenos Aires"));
 		assertTrue(auto.transportarPaquete(new Paquete(0.5, 0.5, 0.5, 100.0), "La Plata"));
